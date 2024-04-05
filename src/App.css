@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-family: "Rubik", sans-serif;
+    background-image: url("./assets/Images/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto; 
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+    max-width: 1250px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hero-section{
+    padding-bottom: 45px;
 }
-
-.App-link {
-  color: #61dafb;
+.category-section{
+     padding-bottom: 113px;
+    position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.category-list::-webkit-scrollbar{
+    display: none;
+}
+.category-item{
+    transition: all linear 0.5s;
+}
+.category-item:hover{
+    background-image: url("./assets/Images/item-bg-img.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.treding-section{
+    padding-bottom: 250px;
+}
+.trending-item:hover{
+    background-image: url("./assets/Images/item-bg-img.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.site-footer{
+    margin-bottom: 48px;
+}
+.footer{
+    padding: 79px 73px 40px 62px;
+    background-color: #F9FFF6;
+    border-radius: 20px;
+}
+.footer-item + .footer-item{
+ margin-top: 19px;
+}
+.footer-label{
+    padding-left: 15px;
+}
+.footer-input::placeholder{
+  color: #000000;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.footer-item-link{
+    transition: all 0.5s;
+}
+.footer-item-link:hover > svg{
+    fill: white;
+}
+.outer{
+    margin-bottom: 32px;
 }
